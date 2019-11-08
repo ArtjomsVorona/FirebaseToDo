@@ -53,32 +53,42 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="bqM-ra-3tr">
                                         <rect key="frame" x="0.0" y="213" width="280" height="96"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-LE-vpZ">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-LE-vpZ" customClass="DesignableTextField" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78900688890000004" green="0.62645339970000002" blue="0.1831265688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="MLo-uQ-Elt"/>
                                                     <constraint firstAttribute="height" constant="34" id="NPB-Nz-qan"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="u.square" catalog="system"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTE-c6-oSp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTE-c6-oSp" customClass="DesignableTextField" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="280" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="280" id="8LA-XF-WNf"/>
                                                     <constraint firstAttribute="height" constant="34" id="iVq-d5-QeN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="p.square" catalog="system"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="S7g-qH-pnu">
                                         <rect key="frame" x="0.0" y="355" width="280" height="34"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-oF-hsE">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-oF-hsE" customClass="DesignButton" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
-                                                <color key="backgroundColor" red="0.61995422840000003" green="0.76723808049999997" blue="0.88513511420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="C95-KD-Ije"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="JXD-kS-IWz"/>
@@ -87,9 +97,9 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5C-yb-Ijj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5C-yb-Ijj" customClass="DesignButton" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="160" y="0.0" width="120" height="34"/>
-                                                <color key="backgroundColor" red="0.61995422840000003" green="0.76723808049999997" blue="0.88513511420000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="i03-Ia-PN2"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="oFZ-Iw-eYT"/>
@@ -103,7 +113,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lpH-pX-OsZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4OR-lR-js1"/>
                             <constraint firstItem="lpH-pX-OsZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="V3k-Jr-E68"/>
@@ -124,7 +134,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u9M-VU-RIw">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -138,5 +148,7 @@
     </scenes>
     <resources>
         <image name="Firebase_logo" width="232" height="64"/>
+        <image name="p.square" catalog="system" width="64" height="56"/>
+        <image name="u.square" catalog="system" width="64" height="56"/>
     </resources>
 </document>
