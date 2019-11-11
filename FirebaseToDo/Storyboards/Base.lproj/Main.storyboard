@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OFx-1o-hc8">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,13 +10,13 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FirebaseToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="lpH-pX-OsZ">
-                                <rect key="frame" x="47.666666666666657" y="143" width="280" height="389"/>
+                                <rect key="frame" x="67" y="143" width="280" height="389"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-Wf-7Zp">
                                         <rect key="frame" x="40" y="0.0" width="200" height="167"/>
@@ -58,7 +58,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.78900688890000004" green="0.62645339970000002" blue="0.1831265688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="280" id="MLo-uQ-Elt"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="MLo-uQ-Elt"/>
                                                     <constraint firstAttribute="height" constant="34" id="NPB-Nz-qan"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,7 +72,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="280" id="8LA-XF-WNf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="8LA-XF-WNf"/>
                                                     <constraint firstAttribute="height" constant="34" id="iVq-d5-QeN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -96,6 +96,9 @@
                                                 <state key="normal" title="Log in">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qj5-zL-oVv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5C-yb-Ijj" customClass="DesignButton" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="160" y="0.0" width="120" height="34"/>
@@ -107,6 +110,9 @@
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="registerBuottonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFE-da-qyH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,10 +127,72 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="RJI-M7-bIO"/>
+                    <connections>
+                        <outlet property="passwordTExtField" destination="yTE-c6-oSp" id="qxL-tw-0z2"/>
+                        <outlet property="usernameTextField" destination="Cfj-LE-vpZ" id="PDs-AR-11y"/>
+                        <outlet property="warningLabel" destination="8oj-Nj-erf" id="3D1-7M-278"/>
+                        <segue destination="bmQ-ha-sh5" kind="show" identifier="fireSegue" id="L3R-73-R3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1027.5" y="92.957746478873247"/>
+        </scene>
+        <!--Tasks View Controller-->
+        <scene sceneID="rQo-Zz-fkf">
+            <objects>
+                <viewController id="ZeU-nW-35w" customClass="TasksViewController" customModule="FirebaseToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49T-JD-MI0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cep-Iz-K40">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FireCell" id="zj6-dw-0EE">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zj6-dw-0EE" id="qFY-sG-TMX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZeU-nW-35w" id="T9Y-cW-bdl"/>
+                                    <outlet property="delegate" destination="ZeU-nW-35w" id="bR7-gI-QCI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cep-Iz-K40" firstAttribute="leading" secondItem="H2v-Ij-H1p" secondAttribute="leading" id="Fgp-JR-1Jv"/>
+                            <constraint firstItem="H2v-Ij-H1p" firstAttribute="bottom" secondItem="Cep-Iz-K40" secondAttribute="bottom" id="NeT-r7-Ov0"/>
+                            <constraint firstItem="H2v-Ij-H1p" firstAttribute="trailing" secondItem="Cep-Iz-K40" secondAttribute="trailing" id="mfe-fB-knD"/>
+                            <constraint firstItem="Cep-Iz-K40" firstAttribute="top" secondItem="H2v-Ij-H1p" secondAttribute="top" id="vDN-7W-tew"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H2v-Ij-H1p"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="khl-g5-mEi">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="h4f-UN-32x">
+                            <connections>
+                                <action selector="logoutItemTapped:" destination="ZeU-nW-35w" id="3fd-pK-Tyt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" image="plus" catalog="system" id="ciD-zp-63V">
+                            <connections>
+                                <action selector="addItemTapped:" destination="ZeU-nW-35w" id="DM6-fi-vI6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taskTableView" destination="Cep-Iz-K40" id="Jgv-ZI-My2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMd-nn-ea7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AUT-sT-cyW">
@@ -132,7 +200,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OFx-1o-hc8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u9M-VU-RIw">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -145,10 +213,30 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="coK-tH-Bmb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bmQ-ha-sh5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TCE-xc-SUL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n3F-IK-NwQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZeU-nW-35w" kind="relationship" relationship="rootViewController" id="rAa-iS-6hb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEn-t0-xGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Firebase_logo" width="232" height="64"/>
         <image name="p.square" catalog="system" width="64" height="56"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
         <image name="u.square" catalog="system" width="64" height="56"/>
     </resources>
 </document>
