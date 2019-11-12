@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -68,17 +68,16 @@
 				292E9625920792917D1B7F55 /* Pods-FirebaseToDo.debug.xcconfig */,
 				AE9ECB26DF855B8CB6E38FAB /* Pods-FirebaseToDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AC6BEE992376D4EA007EC028 /* Storyboards */ = {
+		AC6BEE992376D4EA007EC028 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AC7F4A42237587CA00B929B5 /* Main.storyboard */,
 				AC7F4A47237587D100B929B5 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AC6BEE9A2376D5D3007EC028 /* Controllers */ = {
@@ -114,7 +113,7 @@
 				AC8DB51D2375B53700B651E2 /* Delegates */,
 				AC8DB5212375B67900B651E2 /* Designable */,
 				AC8DB51E2375B63700B651E2 /* Extensions */,
-				AC6BEE992376D4EA007EC028 /* Storyboards */,
+				AC6BEE992376D4EA007EC028 /* Views */,
 				AC6BEE9A2376D5D3007EC028 /* Controllers */,
 				AC7F4A45237587D100B929B5 /* Assets.xcassets */,
 				AC7F4A4A237587D100B929B5 /* Info.plist */,

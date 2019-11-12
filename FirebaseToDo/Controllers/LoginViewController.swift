@@ -23,10 +23,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        warningLabel.alpha = 0.1
+        warningLabel.alpha = 0.0
     }
     
-    @IBAction func loginButtonTapped(_ sender: Any) {
+    @IBAction func loginButtonTapped() {
         guard let email = usernameTextField.text, let password = passwordTExtField.text, email != "", password != "" else {
             displayWarningLabel(withText: "Email/Password incorrect!")
             return
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func registerBuottonTapped(_ sender: Any) {
+    @IBAction func registerBuottonTapped(_ sender: UIButton) {
         guard let email = usernameTextField.text, let password = passwordTExtField.text, email != "", password != "" else {
                     displayWarningLabel(withText: "Email/Password incorrect!")
                     return
@@ -81,4 +81,18 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+//MARK: Extensions
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameTextField {
+            textField.resignFirstResponder()
+            passwordTExtField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }

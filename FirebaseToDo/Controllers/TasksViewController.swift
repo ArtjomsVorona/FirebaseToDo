@@ -23,7 +23,7 @@ class TasksViewController: UIViewController {
     }
     
     @IBAction func logoutItemTapped(_ sender: Any) {
-    
+        self.dismiss(animated: true, completion: nil)
     }
 
 }//end classs

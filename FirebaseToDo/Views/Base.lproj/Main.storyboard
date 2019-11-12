@@ -44,7 +44,7 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Uwy-sq-CUt"/>
                                                     <constraint firstAttribute="height" constant="27" id="tbV-dL-vwG"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -55,31 +55,35 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-LE-vpZ" customClass="DesignableTextField" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.78900688890000004" green="0.62645339970000002" blue="0.1831265688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="MLo-uQ-Elt"/>
                                                     <constraint firstAttribute="height" constant="34" id="NPB-Nz-qan"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="u.square" catalog="system"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ii3-m6-U2P"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yTE-c6-oSp" customClass="DesignableTextField" customModule="FirebaseToDo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="280" height="34"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.78901910779999995" green="0.62641185519999998" blue="0.180365622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="8LA-XF-WNf"/>
                                                     <constraint firstAttribute="height" constant="34" id="iVq-d5-QeN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="p.square" catalog="system"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="a3L-0r-MxQ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -97,7 +101,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qj5-zL-oVv"/>
+                                                    <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfm-qH-YAF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5C-yb-Ijj" customClass="DesignButton" customModule="FirebaseToDo" customModuleProvider="target">
@@ -111,7 +115,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="registerBuottonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFE-da-qyH"/>
+                                                    <action selector="registerBuottonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKo-F7-sIe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
