@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A143AE3663631B8A5D77A757 /* Pods_FirebaseToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96CF8280C355132D726FF6D /* Pods_FirebaseToDo.framework */; };
 		AC0CBF722375D6F70025128D /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0CBF712375D6F70025128D /* DesignableTextField.swift */; };
+		AC48C92A237B0A680066D4FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48C929237B0A680066D4FD /* User.swift */; };
+		AC48C92C237B0B610066D4FD /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48C92B237B0B610066D4FD /* Tasks.swift */; };
 		AC6BEE9E2376D654007EC028 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BEE9D2376D654007EC028 /* LoginViewController.swift */; };
 		AC6BEEA02376D6B6007EC028 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BEE9F2376D6B6007EC028 /* TasksViewController.swift */; };
 		AC6CEB3F2376EA2800ED3CD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC6CEB3E2376EA2800ED3CD9 /* GoogleService-Info.plist */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		292E9625920792917D1B7F55 /* Pods-FirebaseToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseToDo.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseToDo/Pods-FirebaseToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0CBF712375D6F70025128D /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		AC48C929237B0A680066D4FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC48C92B237B0B610066D4FD /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		AC6BEE9D2376D654007EC028 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC6BEE9F2376D6B6007EC028 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		AC6CEB3E2376EA2800ED3CD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AC48C928237B0A380066D4FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC48C929237B0A680066D4FD /* User.swift */,
+				AC48C92B237B0B610066D4FD /* Tasks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AC6BEE992376D4EA007EC028 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 			children = (
 				AC8DB51D2375B53700B651E2 /* Delegates */,
 				AC8DB5212375B67900B651E2 /* Designable */,
+				AC48C928237B0A380066D4FD /* Models */,
 				AC8DB51E2375B63700B651E2 /* Extensions */,
 				AC6BEE992376D4EA007EC028 /* Views */,
 				AC6BEE9A2376D5D3007EC028 /* Controllers */,
@@ -270,8 +284,10 @@
 				AC7F4A3D237587CA00B929B5 /* AppDelegate.swift in Sources */,
 				AC0CBF722375D6F70025128D /* DesignableTextField.swift in Sources */,
 				AC8DB5272375B85100B651E2 /* DesignButton.swift in Sources */,
+				AC48C92A237B0A680066D4FD /* User.swift in Sources */,
 				AC6BEE9E2376D654007EC028 /* LoginViewController.swift in Sources */,
 				AC7F4A3F237587CA00B929B5 /* SceneDelegate.swift in Sources */,
+				AC48C92C237B0B610066D4FD /* Tasks.swift in Sources */,
 				AC8DB5202375B65700B651E2 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

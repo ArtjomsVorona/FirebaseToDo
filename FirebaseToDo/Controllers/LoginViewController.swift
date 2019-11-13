@@ -21,9 +21,47 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: DesignableTextField!
     @IBOutlet weak var passwordTExtField: DesignableTextField!
     
+    override func viewWillLayoutSubviews() {
+        self.navigationItem.titleView = nil
+        self.navigationItem.title = "Login"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        usernameTextField.text = ""
+        passwordTExtField.text = ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         warningLabel.alpha = 0.0
+        
+        ref = Database.database().reference(withPath: "users")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil {
+                self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
+            }
+        }
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= 150
+            
+            let logo = UIImage(named: "fire.png")
+            let imageView = UIImageView(image: logo)
+            self.navigationItem.titleView = imageView
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y += 150
+        }
     }
     
     @IBAction func loginButtonTapped() {
@@ -57,8 +95,8 @@ class LoginViewController: UIViewController {
                         self.displayWarningLabel(withText: "User is not creadted!")
                         return
                     }
-        //            let userRef = self.ref.child((user?.user.uid)!)
-        //            userRef.setValue(["email": user?.user.email])
+                    let userRef = self.ref.child((user?.user.uid)!)
+                    userRef.setValue(["email": user?.user.email])
                 })
     }
     
@@ -70,16 +108,6 @@ class LoginViewController: UIViewController {
                self?.warningLabel.alpha = 0
            }
        }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
