@@ -81,7 +81,6 @@ class LoginViewController: UIViewController {
             }
             self.displayWarningLabel(withText: "No such user!")
         }
-        
     }
     
     @IBAction func registerBuottonTapped(_ sender: UIButton) {
@@ -112,7 +111,6 @@ class LoginViewController: UIViewController {
 }
 
 //MARK: Extensions
-
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {

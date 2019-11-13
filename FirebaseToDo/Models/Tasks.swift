@@ -32,6 +32,5 @@ class Tasks {
     
     func convertToDict() -> Any {
         return ["title": title, "userId": userId, "completed": completed]
-        
     }
 }
